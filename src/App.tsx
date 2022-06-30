@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import './App.css';
-import InputFeild from './components/InputFeild';
-import ToDoList from './components/ToDoList';
-import { ToDo } from './model';
+import React, { useState } from "react";
+import "./App.css";
+import InputFeild from "./components/InputFeild";
+import ToDoList from "./components/ToDoList";
+import { ToDo } from "./model";
 
 // let name: string;
 // let role: [number, string];
@@ -45,7 +45,6 @@ const App: React.FC = () => {
       <ToDoList toDos={toDos} setToDos={setToDos} />
     </div>
   );
-}
-
+};
 
 export default App;

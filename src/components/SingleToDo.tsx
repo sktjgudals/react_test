@@ -20,19 +20,23 @@ const SingleToDo = ({ toDo, toDos, setToDos }: Props) => {
   };
 
   const handleDelete = (id: number) => {
-    const resultArr = toDos.filter((todo) => todo.id !== id);
-    setToDos(resultArr);
+    setToDos(toDos.filter((todo) => todo.id !== id));
+  };
+
+  const handleEdit = (id: number) => {
+    //   setToDos
+    console.log(id);
   };
 
   return (
     <form className="toDos__single">
       {toDo.isDone ? (
-        <span className="toDos__single--text">{toDo.toDo} true</span>
+        <span className="toDos__single--text">{toDo.toDo} </span>
       ) : (
         <span className="toDos__single--text">{toDo.toDo}</span>
       )}
       <div>
-        <span className="icon">
+        <span className="icon" onClick={() => handleEdit(toDo.id)}>
           <AiFillEdit />
         </span>
         <span className="icon" onClick={() => handleDelete(toDo.id)}>
